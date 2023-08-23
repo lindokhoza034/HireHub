@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+  </head>
+
+  <!-- partial:index.partial.html -->
+
+  <body>
+    <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx"><img src="/images/a.jpg" alt="" /></div>
+          <div class="formBx">
+            <form onsubmit="loginUser(event)">
+              <h2>Sign In</h2>
+              <input
+                type="text"
+                name="loginUsername"
+                placeholder="Username"
+                id="loginUsername"
+              />
+              <input
+                type="password"
+                name="loginPassword"
+                placeholder="Password"
+                id="loginPassword"
+              />
+              <input type="submit" name="" value="Login" />
+              <p class="signup">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm();">Sign Up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Create an account</h2>
+              <input
+                type="text"
+                name="firstname"
+                placeholder="First name"
+                id="firstname"
+              />
+              <input
+                type="text"
+                name="lastname"
+                placeholder="Last Name"
+                id="lastname"
+              />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                id="username"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                id="email"
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Create Password"
+                id="password"
+              />
+              <input
+                type="password"
+                name="confirmpassword"
+                placeholder="Confirm Password"
+                id="confirmpassword"
+              />
+              <input
+                type="submit"
+                name=""
+                value="Sign Up"
+                onclick="registerUser();"
+              />
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx"><img src="/images/aa.jpg" alt="" /></div>
+        </div>
+        <div id="error-message"></div>
+      </div>
+    </section>
+
+    <!-- partial -->
+    <%- include('../partials/scripts.ejs') %>
+  </body>
+</html>
